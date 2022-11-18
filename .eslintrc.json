@@ -16,6 +16,18 @@
       ],
       "plugins": ["@typescript-eslint", "eslint-plugin-prettier","import"],
       "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": [
+              "**/*.stories.*",
+              "**/.storybook/**/*.*"
+            ],
+            "peerDependencies": true
+          }
+        ],
+        "react/jsx-props-no-spreading": "off",
+        "react/react-in-jsx-scope": "off",
         "import/order": [
           "error",
           {
@@ -41,6 +53,7 @@
         "react/prop-types": "off",
         "react/require-default-props": "off",
         "@typescript-eslint/indent": "off",
+
         "prettier/prettier": [
           "error", {
             "semi": true,
