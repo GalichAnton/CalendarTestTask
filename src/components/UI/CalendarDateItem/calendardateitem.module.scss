@@ -1,0 +1,15 @@
+@import "../../../style-utils/variables.scss";
+@import "../../../style-utils/mixins.scss";
+
+.textInput {
+  @include textField;
+
+  height: 36px;
+  line-height: 36px;
+}
+
+.textInputFull {
+  &:hover {
+    background-color: $color-text-field-background-hover;
+  }
+}

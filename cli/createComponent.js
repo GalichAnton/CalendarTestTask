@@ -59,14 +59,14 @@ const Template: Story<I${componentName}Props> = (args) => {
   const { children, ...otherArgs } = args;
 
   return (
-    <div>
+    <>
       <${componentName} {...otherArgs}>{children} </${componentName}>
-    </div>
+    </>
   );
 };
 
-const baseArgs = {};`;
-fs.writeFileSync(path.resolve(...componentPath, `${componentName.toLowerCase()}.stories.tsx`), storiesCode);
+const baseArgs: I${componentName}Props = {};`;
+fs.writeFileSync(path.resolve(...componentPath, `index.stories.tsx`), storiesCode);
 
 
 

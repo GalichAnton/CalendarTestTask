@@ -2,13 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@UI/*": ["src/components/UI/*"],
-      "@store/*": ["src/store/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@hooks/*": ["src/hooks/*"],
       "@helpers/*": ["src/helpers/*"],
-      "@http/*": ["src/http/*"],
-      "@pages/*": ["src/pages/*"],
+      "@constants/*": ["src/constants/*"],
       "@assets/*": ["src/assets/*"],
     }
   }

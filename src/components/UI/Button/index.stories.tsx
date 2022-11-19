@@ -9,6 +9,14 @@ import Button from './index';
 export default {
   title: 'UI components/Button',
   component: Button,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Component for displaying button',
+      },
+    },
+    layout: 'centered',
+  },
 } as Meta;
 
 const Template: Story<IButtonProps> = (args) => {
@@ -16,7 +24,7 @@ const Template: Story<IButtonProps> = (args) => {
 
   return (
     <Button {...actions('onClick', 'onMouseOver')} {...otherArgs}>
-      {children}{' '}
+      {children}
     </Button>
   );
 };
