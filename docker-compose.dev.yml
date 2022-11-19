@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: app-dev
+    restart: always
+    image: app-dev
+    build:
+      context: .
+    volumes:
+      - /app/node_modules
+      - ./src:/app/src
+    ports:
+      - 6006:6006

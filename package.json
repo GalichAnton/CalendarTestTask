@@ -1,5 +1,6 @@
 {
   "name": "frontend-test-task",
+  "homepage": "http://GalichAnton.github.io/CalendarTestTask",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -52,6 +53,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.9.2",
     "eslint-webpack-plugin": "^2.5.2",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
     "webpack": "^5.75.0"
@@ -65,7 +67,11 @@
     "lint:fix": "eslint --fix --ext .ts,.tsx ./src",
     "co": "node cli/createComponent.js --path",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook -s public",
+    "docker": "docker-compose -f docker-compose.dev.yml up",
+    "docker:stop": "docker-compose -f docker-compose.dev.yml down"
   },
   "eslintConfig": {
     "extends": [
